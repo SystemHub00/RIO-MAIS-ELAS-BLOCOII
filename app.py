@@ -960,30 +960,33 @@ TEMPLATE_WIZARD = r'''
                                     👁️ EXTENSÃO DE CÍLIOS<br>
                                     💆🏾‍♀️ TRANCISTA
                                 </div>
-                                <div class="hero-highlight">
-                                    <strong>BENEFÍCIOS</strong><br>
-                                    - 100% Gratuito<br>
-                                    - Certificado de Conclusão<br>
-                                    - Aulas presenciais com instrutores qualificados<br>
-                                    - Conteúdo prático voltado para o mercado de trabalho<br>
-                                    - Preparação para geração de renda<br>
-                                    - Material didático incluso<br>
-                                    - Networking com outros profissionais<br>
-                                    - Apoio para iniciar na área profissional<br>
-                                    - Kit Profissional Gratuito
+                                <div class="hero-highlight" style="margin-top: 18px;">
+                                    <strong>BENEFÍCIOS</strong>
+                                    <div class="beneficios-rotativo" style="margin-top: 10px;">
+                                        <span class="beneficio-item">100% Gratuito</span>
+                                        <span class="beneficio-item" style="display:none;">Certificado de Conclusão</span>
+                                        <span class="beneficio-item" style="display:none;">Aulas presenciais com instrutores qualificados</span>
+                                        <span class="beneficio-item" style="display:none;">Conteúdo prático voltado para o mercado de trabalho</span>
+                                        <span class="beneficio-item" style="display:none;">Preparação para geração de renda</span>
+                                        <span class="beneficio-item" style="display:none;">Material didático incluso</span>
+                                        <span class="beneficio-item" style="display:none;">Networking com outros profissionais</span>
+                                        <span class="beneficio-item" style="display:none;">Apoio para iniciar na área profissional</span>
+                                        <span class="beneficio-item" style="display:none;">Kit Profissional Gratuito</span>
+                                    </div>
                                 </div>
                             </div>
                             <div class="panel-actions">
                                                             <script>
-                                                            // Efeito rotativo para as informações
+                                                            // Efeito rotativo para os benefícios
                                                             document.addEventListener('DOMContentLoaded', function() {
-                                                                const items = document.querySelectorAll('.info-rotativo .info-item');
-                                                                let idx = 0;
+                                                                // Rotativo dos benefícios
+                                                                const beneficios = document.querySelectorAll('.beneficios-rotativo .beneficio-item');
+                                                                let idxBeneficio = 0;
                                                                 setInterval(() => {
-                                                                    items.forEach((el, i) => {
-                                                                        el.style.display = (i === idx) ? 'inline' : 'none';
+                                                                    beneficios.forEach((el, i) => {
+                                                                        el.style.display = (i === idxBeneficio) ? 'inline' : 'none';
                                                                     });
-                                                                    idx = (idx + 1) % items.length;
+                                                                    idxBeneficio = (idxBeneficio + 1) % beneficios.length;
                                                                 }, 2500);
                                                             });
                                                             </script>
