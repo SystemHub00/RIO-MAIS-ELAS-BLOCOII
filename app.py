@@ -49,7 +49,7 @@ COURSE_OPTIONS = [
 ]
 COURSE_OPTIONS_BY_ID = {option["id"]: option for option in COURSE_OPTIONS}
 COURSE_INFO = COURSE_OPTIONS[0]
-WHATSAPP_SHARE_HOME_URL = "https://rio-mais-elas.onrender.com"
+WHATSAPP_SHARE_HOME_URL = "https://rio-mais-elas-bloco2.onrender.com"
 
 
 def build_whatsapp_share_url():
