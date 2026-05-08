@@ -27,26 +27,103 @@ VALID_DDDS = {
     "81", "82", "83", "84", "85", "86", "87", "88", "89",
     "91", "92", "93", "94", "95", "96", "97", "98", "99",
 }
-COURSE_OPTIONS = [
-    # DESIGNER DE UNHAS
-    {"id": "1", "local": "CLUBE DEMOCRÁTICOS - CLUBE DEMOCRÁTICOS", "curso": "DESIGNER DE UNHAS", "turma": "DESIGNER DE UNHAS - TURMA 03", "dias_aula": "Segunda, Terça e Quarta | 09h até 16h", "horario": "09h até 16h", "data_inicio": "11/05/2026", "encerramento": "13/05/2026", "endereco_curso": "Clube Democráticos"},
-    {"id": "2", "local": "CLUBE DEMOCRÁTICOS - CLUBE DEMOCRÁTICOS", "curso": "DESIGNER DE UNHAS", "turma": "DESIGNER DE UNHAS - TURMA 04", "dias_aula": "Segunda, Terça e Quarta | 09h até 16h", "horario": "09h até 16h", "data_inicio": "18/05/2026", "encerramento": "20/05/2026", "endereco_curso": "Clube Democráticos"},
-    {"id": "3", "local": "RIO COMPRIDO - RIO COMPRIDO", "curso": "DESIGNER DE UNHAS", "turma": "DESIGNER DE UNHAS - TURMA 05", "dias_aula": "Segunda, Terça e Quarta | 09h até 16h", "horario": "09h até 16h", "data_inicio": "25/05/2026", "encerramento": "27/05/2026", "endereco_curso": "Rua Visconde de Jequitinhonha 41 - Rio Comprido"},
 
-    # DESIGNER DE SOBRANCELHAS
-    {"id": "4", "local": "CEACC - CIDADE DE DEUS", "curso": "DESIGNER DE SOBRANCELHAS", "turma": "DESIGNER DE SOBRANCELHAS - TURMA 05", "dias_aula": "Segunda, Terça e Quarta | 09h até 16h", "horario": "09h até 16h", "data_inicio": "25/05/2026", "encerramento": "27/05/2026", "endereco_curso": "Rua Edgard Werneck 1648, CEACC - Cidade de Deus"},
-    {"id": "5", "local": "RIO COMPRIDO - RIO COMPRIDO", "curso": "DESIGNER DE SOBRANCELHAS", "turma": "DESIGNER DE SOBRANCELHAS - TURMA 06", "dias_aula": "Segunda, Terça e Quarta | 09h até 16h", "horario": "09h até 16h", "data_inicio": "11/05/2026", "encerramento": "13/05/2026", "endereco_curso": "Rua Visconde de Jequitinhonha 41 - Rio Comprido"},
-
-    # EXTENSÃO DE CÍLIOS
-    {"id": "6", "local": "CLUBE DEMOCRÁTICOS - CLUBE DEMOCRÁTICOS", "curso": "EXTENSÃO DE CÍLIOS", "turma": "EXTENSÃO DE CÍLIOS - TURMA 04", "dias_aula": "Segunda, Terça e Quarta | 09h até 16h", "horario": "09h até 16h", "data_inicio": "18/05/2026", "encerramento": "20/05/2026", "endereco_curso": "Clube Democráticos"},
-    {"id": "7", "local": "CEACC - CIDADE DE DEUS", "curso": "EXTENSÃO DE CÍLIOS", "turma": "EXTENSÃO DE CÍLIOS - TURMA 05", "dias_aula": "Segunda, Terça e Quarta | 09h até 16h", "horario": "09h até 16h", "data_inicio": "11/05/2026", "encerramento": "13/05/2026", "endereco_curso": "Rua Edgard Werneck 1648, CEACC - Cidade de Deus"},
-    {"id": "8", "local": "VIDIGAL - VIDIGAL", "curso": "EXTENSÃO DE CÍLIOS", "turma": "EXTENSÃO DE CÍLIOS - TURMA 06", "dias_aula": "Segunda, Terça e Quarta | 09h até 16h", "horario": "09h até 16h", "data_inicio": "25/05/2026", "encerramento": "27/05/2026", "endereco_curso": "Av. Presidente João Goulart 1001 - Vidigal"},
-
-    # TRANCISTA
-    {"id": "9", "local": "RIO COMPRIDO - RIO COMPRIDO", "curso": "TRANCISTA", "turma": "TRANCISTA - TURMA 05", "dias_aula": "Segunda, Terça e Quarta | 09h até 16h", "horario": "09h até 16h", "data_inicio": "25/05/2026", "encerramento": "27/05/2026", "endereco_curso": "Rua Visconde de Jequitinhonha 41 - Rio Comprido"},
-    {"id": "10", "local": "CLUBE DEMOCRÁTICOS - CLUBE DEMOCRÁTICOS", "curso": "TRANCISTA", "turma": "TRANCISTA - TURMA 06", "dias_aula": "Segunda, Terça e Quarta | 09h até 16h", "horario": "09h até 16h", "data_inicio": "18/05/2026", "encerramento": "20/05/2026", "endereco_curso": "Clube Democráticos"},
-    {"id": "11", "local": "CEACC - CIDADE DE DEUS", "curso": "TRANCISTA", "turma": "TRANCISTA - TURMA 07", "dias_aula": "Segunda, Terça e Quarta | 09h até 16h", "horario": "09h até 16h", "data_inicio": "11/05/2026", "encerramento": "13/05/2026", "endereco_curso": "Rua Edgard Werneck 1648, CEACC - Cidade de Deus"},
+# Lista de cursos distintos
+CURSOS_DISPONIVEIS = [
+    {"id": "01", "nome": "DESIGNER DE UNHAS"},
+    {"id": "02", "nome": "DESIGNER DE SOBRANCELHAS"},
+    {"id": "03", "nome": "EXTENSÃO DE CÍLIOS"},
+    {"id": "04", "nome": "TRANCISTA"},
 ]
+
+# Todas as opções de turmas com seus respectivos cursos
+COURSE_OPTIONS = [
+    {
+        "id": "1",
+        "curso_id": "01",
+        "curso": "DESIGNER DE UNHAS",
+        "turma": "TURMA 04",
+        "local": "CEACC - CIDADE DE DEUS",
+        "dias_aula": "Segunda, Terça e Quarta",
+        "horario": "09h até 16h",
+        "data_inicio": "18/05/2026",
+        "encerramento": "20/05/2026",
+        "endereco_curso": "Rua Edgard Werneck 1648, CEACC - Cidade de Deus",
+    },
+    {
+        "id": "2",
+        "curso_id": "01",
+        "curso": "DESIGNER DE UNHAS",
+        "turma": "TURMA 05",
+        "local": "RIO COMPRIDO - RIO COMPRIDO",
+        "dias_aula": "Segunda, Terça e Quarta",
+        "horario": "09h até 16h",
+        "data_inicio": "25/05/2026",
+        "encerramento": "27/05/2026",
+        "endereco_curso": "Rua Visconde de Jequitinhonha 41 - Rio Comprido",
+    },
+    {
+        "id": "3",
+        "curso_id": "02",
+        "curso": "DESIGNER DE SOBRANCELHAS",
+        "turma": "TURMA 05",
+        "local": "CLUBE DEMOCRÁTICOS - CLUBE DEMOCRÁTICOS",
+        "dias_aula": "Segunda, Terça e Quarta",
+        "horario": "09h até 16h",
+        "data_inicio": "25/05/2026",
+        "encerramento": "27/05/2026",
+        "endereco_curso": "Clube Democráticos",
+    },
+    {
+        "id": "4",
+        "curso_id": "03",
+        "curso": "EXTENSÃO DE CÍLIOS",
+        "turma": "TURMA 04",
+        "local": "CLUBE DEMOCRÁTICOS - CLUBE DEMOCRÁTICOS",
+        "dias_aula": "Segunda, Terça e Quarta",
+        "horario": "09h até 16h",
+        "data_inicio": "18/05/2026",
+        "encerramento": "20/05/2026",
+        "endereco_curso": "Clube Democráticos",
+    },
+    {
+        "id": "5",
+        "curso_id": "04",
+        "curso": "TRANCISTA",
+        "turma": "TURMA 05",
+        "local": "CEACC - CIDADE DE DEUS",
+        "dias_aula": "Segunda, Terça e Quarta",
+        "horario": "09h até 16h",
+        "data_inicio": "25/05/2026",
+        "encerramento": "27/05/2026",
+        "endereco_curso": "Rua Edgard Werneck 1648, CEACC - Cidade de Deus",
+    },
+    {
+        "id": "6",
+        "curso_id": "04",
+        "curso": "TRANCISTA",
+        "turma": "TURMA 06",
+        "local": "RIO COMPRIDO - RIO COMPRIDO",
+        "dias_aula": "Segunda, Terça e Quarta",
+        "horario": "09h até 16h",
+        "data_inicio": "18/05/2026",
+        "encerramento": "20/05/2026",
+        "endereco_curso": "Rua Visconde de Jequitinhonha 41 - Rio Comprido",
+    },
+    {
+        "id": "7",
+        "curso_id": "04",
+        "curso": "TRANCISTA",
+        "turma": "TURMA 07",
+        "local": "VIDIGAL - VIDIGAL",
+        "dias_aula": "Segunda, Terça e Quarta",
+        "horario": "09h até 16h",
+        "data_inicio": "01/06/2026",
+        "encerramento": "03/06/2026",
+        "endereco_curso": "Av. Presidente João Goulart 1001 - Vidigal",
+    },
+]
+
 COURSE_OPTIONS_BY_ID = {option["id"]: option for option in COURSE_OPTIONS}
 COURSE_INFO = COURSE_OPTIONS[0]
 WHATSAPP_SHARE_HOME_URL = "https://rio-mais-elas-bloco2.onrender.com"
@@ -80,7 +157,6 @@ TEMPLATE_WIZARD = r'''
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <!-- IMPORTANTE! viewport responsivo para celular -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <title>Rio + Elas</title>
     <link rel="stylesheet" href="/static/style.css">
@@ -386,26 +462,6 @@ TEMPLATE_WIZARD = r'''
         .wizard-panel[data-step="escolher"] .input-with-action {
             width: 100%;
             max-width: 100%;
-        }
-
-        .wizard-panel[data-step="escolher"] #local,
-        .wizard-panel[data-step="escolher"] #curso,
-        .wizard-panel[data-step="escolher"] #turma,
-        .wizard-panel[data-step="escolher"] #dias_aula,
-        .wizard-panel[data-step="escolher"] #horario,
-        .wizard-panel[data-step="escolher"] #data_inicio,
-        .wizard-panel[data-step="escolher"] #encerramento,
-        .wizard-panel[data-step="escolher"] #endereco_curso {
-            width: 100% !important;
-            min-width: 0 !important;
-            max-width: 100% !important;
-            margin: 0 !important;
-        }
-
-        .wizard-panel[data-step="escolher"] .form-group.full:last-child {
-            max-width: 100%;
-            margin-left: auto;
-            margin-right: auto;
         }
 
         .form-group {
@@ -946,7 +1002,7 @@ TEMPLATE_WIZARD = r'''
                 <section class="wizard-panel" data-step="index">
                     <div class="hero-grid">
                         <div class="hero-card">
-                            <span class="hero-pill">PROGRAMA:<br>RIO + ELAS</span>
+                            <span class="hero-pill">PROGRAMA: RIO + ELAS</span>
                             <h1 class="hero-title">TRANSFORME SUA VIDA ATRAVÉS DA BELEZA!</h1>
                             <p class="hero-subtitle">
                                 Cursos de qualificação profissional oferecidos pela Prefeitura do Rio de Janeiro.<br>
@@ -976,20 +1032,18 @@ TEMPLATE_WIZARD = r'''
                                 </div>
                             </div>
                             <div class="panel-actions">
-                                                            <script>
-                                                            // Efeito rotativo para os benefícios
-                                                            document.addEventListener('DOMContentLoaded', function() {
-                                                                // Rotativo dos benefícios
-                                                                const beneficios = document.querySelectorAll('.beneficios-rotativo .beneficio-item');
-                                                                let idxBeneficio = 0;
-                                                                setInterval(() => {
-                                                                    beneficios.forEach((el, i) => {
-                                                                        el.style.display = (i === idxBeneficio) ? 'inline' : 'none';
-                                                                    });
-                                                                    idxBeneficio = (idxBeneficio + 1) % beneficios.length;
-                                                                }, 2500);
-                                                            });
-                                                            </script>
+                                <script>
+                                document.addEventListener('DOMContentLoaded', function() {
+                                    const beneficios = document.querySelectorAll('.beneficios-rotativo .beneficio-item');
+                                    let idxBeneficio = 0;
+                                    setInterval(() => {
+                                        beneficios.forEach((el, i) => {
+                                            el.style.display = (i === idxBeneficio) ? 'inline' : 'none';
+                                        });
+                                        idxBeneficio = (idxBeneficio + 1) % beneficios.length;
+                                    }, 2500);
+                                });
+                                </script>
                                 <button type="button" class="cta-button" data-next="dados">Começar inscrição</button>
                             </div>
                         </div>
@@ -1068,66 +1122,132 @@ TEMPLATE_WIZARD = r'''
                         <h2 class="panel-title">Informações do curso</h2>
 
                         <div class="step-grid step-grid--stacked">
-                            <div class="form-group">
-                                <label for="opcao_id">Escolha sua turma *</label>
-                                <select id="opcao_id" name="opcao_id">
-                                    <option value="" {% if not form_data.get('opcao_id') %}selected{% endif %}>Selecione uma turma</option>
-                                    {% for option in course_options %}
-                                    <option value="{{ option.id }}" {% if form_data.get('opcao_id') == option.id %}selected{% endif %}>
-                                        {{ option.turma }} - {{ option.curso }} - {{ option.local }}
+                            <div class="form-group full">
+                                <label for="curso_select">Selecione o curso *</label>
+                                <select id="curso_select" name="curso_select">
+                                    <option value="">Selecione um curso</option>
+                                    {% for curso in cursos_disponiveis %}
+                                    <option value="{{ curso.id }}" {% if curso_selecionado == curso.id %}selected{% endif %}>
+                                        {{ curso.nome }}
                                     </option>
                                     {% endfor %}
                                 </select>
-                                <div class="balao-erro" id="opcao_id-error" {% if not errors.get('opcao_id') %}hidden{% endif %}>{{ errors.get('opcao_id', '') }}</div>
-                            </div>
-
-                            <div class="form-group">
-                                <label for="local">Local</label>
-                                <input type="text" id="local" name="local" class="readonly-field" readonly value="{{ form_data.get('local', '') }}">
-                            </div>
-
-                            <div class="form-group">
-                                <label for="curso">Curso</label>
-                                <input type="text" id="curso" name="curso" class="readonly-field" readonly value="{{ form_data.get('curso', '') }}">
                             </div>
 
                             <div class="form-group full">
-                                <label for="turma">Turma</label>
-                                <input type="text" id="turma" name="turma" class="readonly-field" readonly value="{{ form_data.get('turma', '') }}">
+                                <label for="turma_select">Selecione a turma *</label>
+                                <select id="turma_select" name="opcao_id">
+                                    <option value="">Primeiro selecione um curso</option>
+                                </select>
+                                <div class="balao-erro" id="opcao_id-error"
+                                    {% if not errors.get('opcao_id') %}hidden{% endif %}>
+                                    {{ errors.get('opcao_id', '') }}
+                                </div>
                             </div>
 
-                            <div class="form-group">
+                            <div class="form-group full">
+                                <label for="curso">Curso *</label>
+                                <input type="text"
+                                    id="curso"
+                                    name="curso"
+                                    class="readonly-field"
+                                    readonly
+                                    value="{{ form_data.get('curso', '') }}">
+                            </div>
+
+                            <div class="form-group full">
+                                <label for="turma">Turma *</label>
+                                <input type="text"
+                                    id="turma"
+                                    name="turma"
+                                    class="readonly-field"
+                                    readonly
+                                    value="{{ form_data.get('turma', '') }}">
+                            </div>
+
+                            <div class="form-group full">
+                                <label for="local_nome">Local *</label>
+                                <input type="text"
+                                    id="local_nome"
+                                    class="readonly-field"
+                                    readonly
+                                    value="{{ form_data.get('local', '') }}">
+                            </div>
+
+                            <div class="form-group full">
                                 <label for="dias_aula">Dias de aula</label>
-                                <input type="text" id="dias_aula" name="dias_aula" class="readonly-field" readonly value="{{ form_data.get('dias_aula', '') }}">
+                                <input type="text"
+                                    id="dias_aula"
+                                    name="dias_aula"
+                                    class="readonly-field"
+                                    readonly
+                                    value="{{ form_data.get('dias_aula', '') }}">
                             </div>
 
-                            <div class="form-group">
+                            <div class="form-group full">
                                 <label for="horario">Horário</label>
-                                <input type="text" id="horario" name="horario" class="readonly-field" readonly value="{{ form_data.get('horario', '') }}">
+                                <input type="text"
+                                    id="horario"
+                                    name="horario"
+                                    class="readonly-field"
+                                    readonly
+                                    value="{{ form_data.get('horario', '') }}">
                             </div>
 
-                            <div class="form-group">
-                                <label for="data_inicio">Início previsto</label>
-                                <input type="text" id="data_inicio" name="data_inicio" class="readonly-field" readonly value="{{ form_data.get('data_inicio', '') }}">
+                            <div class="form-group full">
+                                <label for="data_inicio">Data de início</label>
+                                <input type="text"
+                                    id="data_inicio"
+                                    name="data_inicio"
+                                    class="readonly-field"
+                                    readonly
+                                    value="{{ form_data.get('data_inicio', '') }}">
                             </div>
 
-                            <div class="form-group">
-                                <label for="encerramento">Encerramento</label>
-                                <input type="text" id="encerramento" name="encerramento" class="readonly-field" readonly value="{{ form_data.get('encerramento', '') }}">
+                            <div class="form-group full">
+                                <label for="encerramento">Data de encerramento</label>
+                                <input type="text"
+                                    id="encerramento"
+                                    name="encerramento"
+                                    class="readonly-field"
+                                    readonly
+                                    value="{{ form_data.get('encerramento', '') }}">
                             </div>
 
                             <div class="form-group full">
                                 <label for="endereco_curso">Endereço da unidade</label>
+
                                 <div class="input-with-action">
-                                    <input type="text" id="endereco_curso" name="endereco_curso" class="readonly-field" readonly value="{{ form_data.get('endereco_curso', '') }}">
-                                    <button type="button" class="icon-button" id="btn-copiar-endereco" title="Copiar endereço">Copiar 📋</button>
+                                    <input type="text"
+                                        id="endereco_curso"
+                                        name="endereco_curso"
+                                        class="readonly-field"
+                                        readonly
+                                        value="{{ form_data.get('endereco_curso', '') }}">
+
+                                    <button type="button"
+                                        class="icon-button"
+                                        id="btn-copiar-endereco"
+                                        title="Copiar endereço">
+                                        Copiar 📋
+                                    </button>
                                 </div>
                             </div>
+
                         </div>
 
                         <div class="panel-actions">
-                            <button type="button" class="secondary-button" data-prev="dados">Voltar</button>
-                            <button type="button" class="cta-button" data-next="revisao">Ir para revisão</button>
+                            <button type="button"
+                                class="secondary-button"
+                                data-prev="dados">
+                                Voltar
+                            </button>
+
+                            <button type="button"
+                                class="cta-button"
+                                data-next="revisao">
+                                Ir para revisão
+                            </button>
                         </div>
                     </div>
                 </section>
@@ -1155,9 +1275,9 @@ TEMPLATE_WIZARD = r'''
                             <div class="review-box">
                                 <div class="review-title">Informações do curso</div>
                                 <div class="review-list">
-                                    <div class="review-item"><strong>Programa</strong><span data-review="local"></span></div>
                                     <div class="review-item"><strong>Curso</strong><span data-review="curso"></span></div>
                                     <div class="review-item"><strong>Turma</strong><span data-review="turma"></span></div>
+                                    <div class="review-item"><strong>Local</strong><span data-review="local"></span></div>
                                     <div class="review-item"><strong>Dias de aula</strong><span data-review="dias_aula"></span></div>
                                     <div class="review-item"><strong>Horário</strong><span data-review="horario"></span></div>
                                     <div class="review-item"><strong>Início previsto</strong><span data-review="data_inicio"></span></div>
@@ -1225,10 +1345,19 @@ TEMPLATE_WIZARD = r'''
             const panels = Array.from(document.querySelectorAll('[data-step]'));
             const labels = Array.from(document.querySelectorAll('[data-step-label]'));
             const reviewTargets = Array.from(document.querySelectorAll('[data-review]'));
+            
             const courseOptions = {{ course_options|tojson }};
             const courseOptionsById = Object.fromEntries(courseOptions.map(function(option) {
                 return [String(option.id), option];
             }));
+            
+            const optionsByCursoId = {};
+            courseOptions.forEach(function(option) {
+                if (!optionsByCursoId[option.curso_id]) {
+                    optionsByCursoId[option.curso_id] = [];
+                }
+                optionsByCursoId[option.curso_id].push(option);
+            });
 
             const nomeInput = document.getElementById('nome');
             const generoInput = document.getElementById('genero');
@@ -1238,10 +1367,11 @@ TEMPLATE_WIZARD = r'''
             const cepInput = document.getElementById('cep');
             const bairroInput = document.getElementById('bairro');
             const emailInput = document.getElementById('email');
-            const opcaoIdInput = document.getElementById('opcao_id');
-            const localInput = document.getElementById('local');
+            const cursoSelect = document.getElementById('curso_select');
+            const turmaSelect = document.getElementById('turma_select');
             const cursoInput = document.getElementById('curso');
             const turmaInput = document.getElementById('turma');
+            const localInput = document.getElementById('local_nome');
             const diasAulaInput = document.getElementById('dias_aula');
             const horarioInput = document.getElementById('horario');
             const dataInicioInput = document.getElementById('data_inicio');
@@ -1249,32 +1379,6 @@ TEMPLATE_WIZARD = r'''
             const confirmaDadosInput = document.getElementById('confirma_dados');
             const enderecoInput = document.getElementById('endereco_curso');
             const btnCopiarEndereco = document.getElementById('btn-copiar-endereco');
-            // Preencher automaticamente os campos do curso ao selecionar a turma
-            if (opcaoIdInput) {
-                opcaoIdInput.addEventListener('change', function() {
-                    const selectedId = opcaoIdInput.value;
-                    const option = courseOptionsById[selectedId];
-                    if (option) {
-                        localInput.value = option.local;
-                        cursoInput.value = option.curso;
-                        turmaInput.value = option.turma;
-                        diasAulaInput.value = option.dias_aula;
-                        horarioInput.value = option.horario;
-                        dataInicioInput.value = option.data_inicio;
-                        encerramentoInput.value = option.encerramento;
-                        enderecoInput.value = option.endereco_curso;
-                    } else {
-                        localInput.value = '';
-                        cursoInput.value = '';
-                        turmaInput.value = '';
-                        diasAulaInput.value = '';
-                        horarioInput.value = '';
-                        dataInicioInput.value = '';
-                        encerramentoInput.value = '';
-                        enderecoInput.value = '';
-                    }
-                });
-            }
 
             function somenteDigitos(valor) {
                 return (valor || '').replace(/\D/g, '');
@@ -1447,11 +1551,35 @@ TEMPLATE_WIZARD = r'''
                 });
             }
 
+            function atualizarTurmas() {
+                const cursoId = cursoSelect.value;
+                turmaSelect.innerHTML = '<option value="">Selecione uma turma</option>';
+                
+                if (!cursoId) {
+                    turmaSelect.innerHTML = '<option value="">Primeiro selecione um curso</option>';
+                    return;
+                }
+                
+                const turmas = optionsByCursoId[cursoId] || [];
+                if (turmas.length === 0) {
+                    turmaSelect.innerHTML = '<option value="">Nenhuma turma disponível</option>';
+                    return;
+                }
+                
+                turmas.forEach(function(turma) {
+                    const option = document.createElement('option');
+                    option.value = turma.id;
+                    option.textContent = turma.turma + ' - ' + turma.local;
+                    turmaSelect.appendChild(option);
+                });
+            }
+
             function aplicarOpcaoCurso(optionId) {
                 const option = courseOptionsById[String(optionId)];
                 if (!option) {
                     cursoInput.value = '';
                     turmaInput.value = '';
+                    localInput.value = '';
                     diasAulaInput.value = '';
                     horarioInput.value = '';
                     dataInicioInput.value = '';
@@ -1460,9 +1588,9 @@ TEMPLATE_WIZARD = r'''
                     return;
                 }
 
-                localInput.value = String(option.id);
                 cursoInput.value = option.curso;
                 turmaInput.value = option.turma;
+                localInput.value = option.local;
                 diasAulaInput.value = option.dias_aula;
                 horarioInput.value = option.horario;
                 dataInicioInput.value = option.data_inicio;
@@ -1590,9 +1718,9 @@ TEMPLATE_WIZARD = r'''
             }
 
             function validarPassoEscolher() {
-                if (!courseOptionsById[String(localInput.value)]) {
-                    setError('opcao_id', 'Selecione um local válido.');
-                    localInput.focus();
+                if (!turmaSelect.value || !courseOptionsById[String(turmaSelect.value)]) {
+                    setError('opcao_id', 'Selecione uma turma válida.');
+                    turmaSelect.focus();
                     return false;
                 }
                 setError('opcao_id', '');
@@ -1702,17 +1830,26 @@ TEMPLATE_WIZARD = r'''
                 }
                 syncReview();
             });
-            localInput.addEventListener('change', function() {
-                aplicarOpcaoCurso(localInput.value);
+            
+            cursoSelect.addEventListener('change', function() {
+                atualizarTurmas();
+                turmaSelect.value = '';
+                aplicarOpcaoCurso('');
                 syncReview();
             });
+            
+            turmaSelect.addEventListener('change', function() {
+                aplicarOpcaoCurso(turmaSelect.value);
+                syncReview();
+            });
+            
             confirmaDadosInput.addEventListener('change', function() {
                 if (confirmaDadosInput.checked) {
                     setError('confirma_dados', '');
                 }
             });
 
-            ['nome', 'genero', 'whatsapp', 'cep', 'bairro', 'email', 'local', 'curso', 'turma', 'dias_aula', 'horario', 'data_inicio', 'encerramento', 'endereco_curso', 'como_conheceu'].forEach(function(fieldId) {
+            ['nome', 'genero', 'whatsapp', 'cep', 'bairro', 'email', 'curso', 'turma', 'dias_aula', 'horario', 'data_inicio', 'encerramento', 'endereco_curso', 'como_conheceu'].forEach(function(fieldId) {
                 const field = document.getElementById(fieldId);
                 if (!field) {
                     return;
@@ -1737,7 +1874,16 @@ TEMPLATE_WIZARD = r'''
                 });
             }
 
-            aplicarOpcaoCurso(localInput.value);
+            atualizarTurmas();
+            const selectedOptionId = '{{ form_data.get("opcao_id", "") }}';
+            if (selectedOptionId && courseOptionsById[selectedOptionId]) {
+                const option = courseOptionsById[selectedOptionId];
+                cursoSelect.value = option.curso_id;
+                atualizarTurmas();
+                turmaSelect.value = selectedOptionId;
+                aplicarOpcaoCurso(selectedOptionId);
+            }
+            
             syncReview();
             mostrarPasso(stepOrder.includes(startStep) ? startStep : 'index');
         });
@@ -1751,7 +1897,6 @@ TEMPLATE_CONFIRMACAO = r'''
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <!-- IMPORTANTE! viewport responsivo para celular -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <title>Inscrição realizada com sucesso</title>
     <link rel="stylesheet" href="/static/style.css">
@@ -2207,7 +2352,7 @@ def validate_form_data(form_data):
     selected_option = get_course_option(form_data["opcao_id"])
 
     if not selected_option:
-        errors["opcao_id"] = "Selecione um local válido."
+        errors["opcao_id"] = "Selecione uma turma válida."
 
     nome = form_data["nome"]
     if not nome:
@@ -2258,11 +2403,16 @@ def error_step(errors):
 def render_wizard(form_data=None, errors=None, current_step="index"):
     current_form_data = form_data or get_default_form_data()
     selected_option = get_course_option(current_form_data.get("opcao_id")) or COURSE_INFO
+    curso_selecionado = ""
+    if selected_option:
+        curso_selecionado = selected_option.get("curso_id", "")
 
     return render_template_string(
         TEMPLATE_WIZARD,
         course_info=selected_option,
         course_options=COURSE_OPTIONS,
+        cursos_disponiveis=CURSOS_DISPONIVEIS,
+        curso_selecionado=curso_selecionado,
         current_step=current_step,
         errors=errors or {},
         form_data=current_form_data,
@@ -2391,3 +2541,4 @@ def send_registration_to_supabase(form_data):
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 5000))
     app.run(host="0.0.0.0", port=port)
+    
