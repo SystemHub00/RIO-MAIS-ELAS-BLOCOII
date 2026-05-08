@@ -946,7 +946,7 @@ TEMPLATE_WIZARD = r'''
                 <section class="wizard-panel" data-step="index">
                     <div class="hero-grid">
                         <div class="hero-card">
-                            <span class="hero-pill">PROGRAMA: RIO + ELAS</span>
+                            <span class="hero-pill">PROGRAMA:<br>RIO + ELAS</span>
                             <h1 class="hero-title">TRANSFORME SUA VIDA ATRAVÉS DA BELEZA!</h1>
                             <p class="hero-subtitle">
                                 Cursos de qualificação profissional oferecidos pela Prefeitura do Rio de Janeiro.<br>
@@ -1069,23 +1069,30 @@ TEMPLATE_WIZARD = r'''
 
                         <div class="step-grid step-grid--stacked">
                             <div class="form-group">
-                                <label for="local">Local *</label>
-                                <select id="local" name="opcao_id">
-                                    <option value="" {% if not form_data.get('opcao_id') %}selected{% endif %}>Selecione um local</option>
+                                <label for="opcao_id">Escolha sua turma *</label>
+                                <select id="opcao_id" name="opcao_id">
+                                    <option value="" {% if not form_data.get('opcao_id') %}selected{% endif %}>Selecione uma turma</option>
                                     {% for option in course_options %}
-                                    <option value="{{ option.id }}" {% if form_data.get('opcao_id') == option.id %}selected{% endif %}>{{ option.local }}</option>
+                                    <option value="{{ option.id }}" {% if form_data.get('opcao_id') == option.id %}selected{% endif %}>
+                                        {{ option.turma }} - {{ option.curso }} - {{ option.local }}
+                                    </option>
                                     {% endfor %}
                                 </select>
                                 <div class="balao-erro" id="opcao_id-error" {% if not errors.get('opcao_id') %}hidden{% endif %}>{{ errors.get('opcao_id', '') }}</div>
                             </div>
 
                             <div class="form-group">
-                                <label for="curso">Curso *</label>
+                                <label for="local">Local</label>
+                                <input type="text" id="local" name="local" class="readonly-field" readonly value="{{ form_data.get('local', '') }}">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="curso">Curso</label>
                                 <input type="text" id="curso" name="curso" class="readonly-field" readonly value="{{ form_data.get('curso', '') }}">
                             </div>
 
                             <div class="form-group full">
-                                <label for="turma">Turma *</label>
+                                <label for="turma">Turma</label>
                                 <input type="text" id="turma" name="turma" class="readonly-field" readonly value="{{ form_data.get('turma', '') }}">
                             </div>
 
@@ -1231,6 +1238,7 @@ TEMPLATE_WIZARD = r'''
             const cepInput = document.getElementById('cep');
             const bairroInput = document.getElementById('bairro');
             const emailInput = document.getElementById('email');
+            const opcaoIdInput = document.getElementById('opcao_id');
             const localInput = document.getElementById('local');
             const cursoInput = document.getElementById('curso');
             const turmaInput = document.getElementById('turma');
@@ -1241,6 +1249,32 @@ TEMPLATE_WIZARD = r'''
             const confirmaDadosInput = document.getElementById('confirma_dados');
             const enderecoInput = document.getElementById('endereco_curso');
             const btnCopiarEndereco = document.getElementById('btn-copiar-endereco');
+            // Preencher automaticamente os campos do curso ao selecionar a turma
+            if (opcaoIdInput) {
+                opcaoIdInput.addEventListener('change', function() {
+                    const selectedId = opcaoIdInput.value;
+                    const option = courseOptionsById[selectedId];
+                    if (option) {
+                        localInput.value = option.local;
+                        cursoInput.value = option.curso;
+                        turmaInput.value = option.turma;
+                        diasAulaInput.value = option.dias_aula;
+                        horarioInput.value = option.horario;
+                        dataInicioInput.value = option.data_inicio;
+                        encerramentoInput.value = option.encerramento;
+                        enderecoInput.value = option.endereco_curso;
+                    } else {
+                        localInput.value = '';
+                        cursoInput.value = '';
+                        turmaInput.value = '';
+                        diasAulaInput.value = '';
+                        horarioInput.value = '';
+                        dataInicioInput.value = '';
+                        encerramentoInput.value = '';
+                        enderecoInput.value = '';
+                    }
+                });
+            }
 
             function somenteDigitos(valor) {
                 return (valor || '').replace(/\D/g, '');
