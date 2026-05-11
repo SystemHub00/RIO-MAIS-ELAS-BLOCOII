@@ -13,7 +13,7 @@ from gsheet_utils import append_to_sheet
 
 ALLOWED_EMAIL_PATTERN = re.compile(
     r"^[a-zA-Z0-9_.+-]+@((gmail|hotmail|outlook|yahoo)\.(com|com\.br))$",
-    re.IGNORECASE,
+    re.IGNORECASE, 
 )
 NAME_PATTERN = re.compile(r"[A-Za-zÀ-ÿ '´`^~.-]+")
 VALID_DDDS = {
