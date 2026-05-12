@@ -39,18 +39,6 @@ CURSOS_DISPONIVEIS = [
 # Todas as opções de turmas com seus respectivos cursos
 COURSE_OPTIONS = [
     {
-        "id": "1",
-        "curso_id": "01",
-        "curso": "DESIGNER DE UNHAS",
-        "turma": "TURMA 04",
-        "local": "CEACC - CIDADE DE DEUS",
-        "dias_aula": "Segunda, Terça e Quarta",
-        "horario": "09h até 16h",
-        "data_inicio": "18/05/2026",
-        "encerramento": "20/05/2026",
-        "endereco_curso": "Rua Edgard Werneck 1648, CEACC - Cidade de Deus",
-    },
-    {
         "id": "2",
         "curso_id": "01",
         "curso": "DESIGNER DE UNHAS",
@@ -85,18 +73,6 @@ COURSE_OPTIONS = [
         "data_inicio": "18/05/2026",
         "encerramento": "20/05/2026",
         "endereco_curso": "Clube Democráticos",
-    },
-    {
-        "id": "5",
-        "curso_id": "04",
-        "curso": "TRANCISTA",
-        "turma": "TURMA 05",
-        "local": "CEACC - CIDADE DE DEUS",
-        "dias_aula": "Segunda, Terça e Quarta",
-        "horario": "09h até 16h",
-        "data_inicio": "25/05/2026",
-        "encerramento": "27/05/2026",
-        "endereco_curso": "Rua Edgard Werneck 1648, CEACC - Cidade de Deus",
     },
     {
         "id": "6",
