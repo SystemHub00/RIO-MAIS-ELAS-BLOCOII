@@ -1167,7 +1167,7 @@ TEMPLATE_WIZARD = r'''
                                     name="horario"
                                     class="readonly-field"
                                     readonly
-                                    value="{{ form_data.get('horario', '') }}">
+                                    value="{{ form_data.get('horario', '') }}"style="width: calc(100% - 2px) !important; margin-left: 2px !important; margin-right: 2px !important; max-width: calc(100% - 2px) !important;">
                             </div>
 
                             <div class="form-group full">
@@ -1177,7 +1177,7 @@ TEMPLATE_WIZARD = r'''
                                     name="data_inicio"
                                     class="readonly-field"
                                     readonly
-                                    value="{{ form_data.get('data_inicio', '') }}">
+                                    value="{{ form_data.get('data_inicio', '') }}"style="width: calc(100% - 2px) !important; margin-left: 2px !important; margin-right: 2px !important; max-width: calc(100% - 2px) !important;">
                             </div>
 
                             <div class="form-group full">
@@ -1187,7 +1187,7 @@ TEMPLATE_WIZARD = r'''
                                     name="encerramento"
                                     class="readonly-field"
                                     readonly
-                                    value="{{ form_data.get('encerramento', '') }}">
+                                    value="{{ form_data.get('encerramento', '') }}"style="width: calc(100% - 2px) !important; margin-left: 2px !important; margin-right: 2px !important; max-width: calc(100% - 2px) !important;">
                             </div>
 
                             <div class="form-group full">
