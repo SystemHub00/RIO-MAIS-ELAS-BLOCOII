@@ -94,8 +94,8 @@ COURSE_OPTIONS = [
         "local": "VIDIGAL - VIDIGAL",
         "dias_aula": "Segunda, Terça e Quarta",
         "horario": "09h até 16h",
-        "data_inicio": "01/06/2026",
-        "encerramento": "03/06/2026",
+        "data_inicio": "08/06/2026",
+        "encerramento": "10/06/2026",
         "endereco_curso": "Av. Presidente João Goulart 1001 - Vidigal",
     },
 ]
